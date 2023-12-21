@@ -1,8 +1,57 @@
 <!doctype html>
 <html>
     <head>
-        <meta charset="UTF-8">
+        <meta name="referrer" content="never" charset="UTF-8">
+        <style>
+            .button {
+                border: none;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                width: 200px;
+                height: 50px;
+                cursor: pointer;
+                border-radius: 30px;
+            }
+            
+            .button1 {
+                background-color: #04AA6D;
+                margin-top: 50px;
+            }
+            .button2 {
+                background-color: #1B6EE6;
+                margin-top: 15px;
+            }
+            </style>
             <title>IMTT</title>
     </head>
-    <a style="text-align:center" href="itms-services:///?action=download-manifest&url=https://api22-sgsaas1-drive-sg.larksuite.com/space/api/box/stream/download/all/FqGubDyUqo1ypYxkFFFlfWYWgbf">点我下载</a>
+
+    <div>
+        <br><br><br><br><br>
+        <center>
+            <div>
+                <img src="https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/all/Q1Ogbesf1o2ptmxNpRKlmHNXgOb" width="200px" height="200px"></img>
+            </div>
+            <div>
+                <button class="button button1" onclick="downloadAndroid">Android</button>
+            </div>
+            <div>
+                <button class="button button2" onclick="downloadIOS">iOS</button>
+            </div>
+        </center>
+    </div>
+
+
+    <script>
+        function downloadIOS() {
+            var iosUrl = "itms-services:///?action=download-manifest&url=https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/all/P1Uabm8m5ofxJnxiSezlFAKugid"
+            window.location.href = iosUrl
+        }
+
+        function downloadAndroid() {
+
+        }
+    </script>
 </html>
