@@ -1,17 +1,31 @@
 <!doctype html>
 <html>
     <head>
-        <meta name="referrer" content="never" charset="UTF-8">
+        <meta name="referrer" content="never">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
         <style>
+            #out {
+                width: 414px;
+                height: 667px;
+                position: relative;
+            }
+
+            #in {
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
             .button {
                 border: none;
                 color: white;
                 text-align: center;
                 text-decoration: none;
                 display: inline-block;
-                font-size: 16px;
-                width: 200px;
-                height: 50px;
+                font-size: 24px;
+                width: 250px;
+                height: 60px;
                 cursor: pointer;
                 border-radius: 30px;
             }
@@ -22,26 +36,30 @@
             }
             .button2 {
                 background-color: #1B6EE6;
-                margin-top: 15px;
+                margin-top: 10px;
             }
+
             </style>
             <title>IMTT</title>
     </head>
 
-    <div>
-        <br><br><br><br><br>
-        <center>
-            <div>
-                <img src="https://internal-api-drive-stream-sg.larksuite.com/space/api/box/stream/download/all/Q1Ogbesf1o2ptmxNpRKlmHNXgOb" width="200px" height="200px"></img>
+    <body>
+        <div id="out">
+            <div id="in">
+                <center>
+                    <div>
+                        <img src="assets/icon_512.png" width="200px" height="200px"></img>
+                    </div>
+                    <div>
+                        <button class="button button1" onclick="downloadAndroid()">Android</button>
+                    </div>
+                    <div>
+                        <button class="button button2" onclick="downloadIOS()">iOS</button>
+                    </div>
+                </center>
             </div>
-            <div>
-                <button class="button button1" onclick="downloadAndroid">Android</button>
-            </div>
-            <div>
-                <button class="button button2" onclick="downloadIOS">iOS</button>
-            </div>
-        </center>
-    </div>
+        </div>
+    </body>
 
 
     <script>
